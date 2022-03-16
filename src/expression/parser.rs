@@ -211,6 +211,7 @@ mod tests {
         let expression_result = parse_int_ring_expression("5 hest");
 
         assert_eq!(Err(ParseExpressionError{message: "Invalid token".to_string(), position: 2, kind: TokenParseError}), expression_result);
+        expression_result.unwrap_err().
     }
 
     #[test]
